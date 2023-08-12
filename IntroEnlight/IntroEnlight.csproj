@@ -1,0 +1,583 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B97851FE-734F-4BF2-926E-14325FDC703F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntroEnlight</RootNamespace>
+    <AssemblyName>IntroEnlight</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44316</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="css\About.css" />
+    <Content Include="css\Contact.css" />
+    <Content Include="css\EnlightDesktopUsers_CSS\Admin\AcademicsSubModule.css" />
+    <Content Include="css\EnlightDesktopUsers_CSS\Admin\AdminAccessModules.css" />
+    <Content Include="css\EnlightDesktopUsers_CSS\Admin\AdmissionSubModule.css" />
+    <Content Include="css\EnlightDesktopUsers_CSS\Admin\BasicSetupSubModule.css" />
+    <Content Include="css\EnlightDesktopUsers_CSS\Admin\FeesCollectionSubModule.css" />
+    <Content Include="css\EnlightDesktopUsers_CSS\Admin\FeesSetupSubModule.css" />
+    <Content Include="css\EnlightDesktopUsers_CSS\Admin\LibrarySubModule.css" />
+    <Content Include="css\EnlightDesktopUsers_CSS\Admin\StaffSubModule.css" />
+    <Content Include="css\EnlightDesktopUsers_CSS\Admin\UsersSubModule.css" />
+    <Content Include="css\EnlightDesktopUsers_CSS\Clerk\ClerkAccessibleModule.css" />
+    <Content Include="css\EnlightMarinePage.css" />
+    <Content Include="css\Home.css" />
+    <Content Include="css\nicepage.css" />
+    <Content Include="css\Services.css" />
+    <Content Include="css\Trial.css" />
+    <Content Include="EnlightDesktop.aspx" />
+    <Content Include="EnlightDesktopAdmin_AcademicsSubModule.aspx" />
+    <Content Include="EnlightDesktopAdmin_AccessibleModule.aspx" />
+    <Content Include="EnlightDesktopAdmin_AdmissionSubModule.aspx" />
+    <Content Include="EnlightDesktopAdmin_BasicSetupSubModule.aspx" />
+    <Content Include="EnlightDesktopAdmin_FeesCollectionSubModule.aspx" />
+    <Content Include="EnlightDesktopAdmin_FeesSetupSubModule.aspx" />
+    <Content Include="EnlightDesktopAdmin_LibrarySubModule.aspx" />
+    <Content Include="EnlightDesktopAdmin_StaffSubModule.aspx" />
+    <Content Include="EnlightDesktopCashier_AccessibleModule.aspx" />
+    <Content Include="EnlightDesktopClerk_AccessibleModule.aspx" />
+    <Content Include="EnlightDesktopLibrarian_AccessibleModule.aspx" />
+    <Content Include="EnlightDesktopTeacher_AccessibleModule.aspx" />
+    <Content Include="EnlightMarinePage.aspx" />
+    <Content Include="EnlightMobileApp.aspx" />
+    <Content Include="EnlightMobileAppAccessibleModules.aspx" />
+    <Content Include="EnlightOnline.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\01.jpg" />
+    <Content Include="images\0fd3416c.jpeg" />
+    <Content Include="images\1014347-b7b71d26.png" />
+    <Content Include="images\10347656-1068c12a.png" />
+    <Content Include="images\10347656.png" />
+    <Content Include="images\10418849-9b647b7a.png" />
+    <Content Include="images\10418849.png" />
+    <Content Include="images\10438658-7690898e.png" />
+    <Content Include="images\10438658.png" />
+    <Content Include="images\10444287-f3ca5387.png" />
+    <Content Include="images\10444287.png" />
+    <Content Include="images\10486707-7ad0f914.png" />
+    <Content Include="images\10486707.png" />
+    <Content Include="images\10568972-2894892c.png" />
+    <Content Include="images\10568972.png" />
+    <Content Include="images\10695843-6f5a693d.png" />
+    <Content Include="images\10695843.png" />
+    <Content Include="images\10769172-2fac230b.png" />
+    <Content Include="images\10769172.png" />
+    <Content Include="images\10815263-1497d96e.png" />
+    <Content Include="images\10815263.png" />
+    <Content Include="images\10819559-241edf20.png" />
+    <Content Include="images\10819559.png" />
+    <Content Include="images\1085742-9d82ae88.png" />
+    <Content Include="images\1085742.png" />
+    <Content Include="images\10939016-cc3017d2.png" />
+    <Content Include="images\10939016.png" />
+    <Content Include="images\1142988-8821250e.png" />
+    <Content Include="images\1142988.png" />
+    <Content Include="images\1159875-3753ff94.png" />
+    <Content Include="images\1159875.png" />
+    <Content Include="images\1164651-e19d4680.png" />
+    <Content Include="images\1164651.png" />
+    <Content Include="images\1167069.png" />
+    <Content Include="images\121963-0623b23e.png" />
+    <Content Include="images\121963.png" />
+    <Content Include="images\1231142-c09ab990.png" />
+    <Content Include="images\1231142.png" />
+    <Content Include="images\1231223.png" />
+    <Content Include="images\12325503_4944103.jpg" />
+    <Content Include="images\12325509_4953097.jpg" />
+    <Content Include="images\12334786_4936927.jpg" />
+    <Content Include="images\13146680_Tiny_student_sitting_on_book_pile_and_reading-removebg-preview.png" />
+    <Content Include="images\15635849_5650732.jpg" />
+    <Content Include="images\1827364-0349bba7.png" />
+    <Content Include="images\1827364.png" />
+    <Content Include="images\1827933-78dc33b0.png" />
+    <Content Include="images\1827933.png" />
+    <Content Include="images\1940611-3a0cd392.png" />
+    <Content Include="images\1940611.png" />
+    <Content Include="images\1946436-334adaac.png" />
+    <Content Include="images\1946436.png" />
+    <Content Include="images\1950630-0b8bb108.png" />
+    <Content Include="images\1950630.png" />
+    <Content Include="images\1972400-668b19d2.png" />
+    <Content Include="images\1972400.png" />
+    <Content Include="images\2089383-c34264d1.png" />
+    <Content Include="images\2089383.png" />
+    <Content Include="images\2099199-d6a2e14e.png" />
+    <Content Include="images\2099199.png" />
+    <Content Include="images\2141878-17146e19.png" />
+    <Content Include="images\2141878.png" />
+    <Content Include="images\2258843-ce8a9965.png" />
+    <Content Include="images\2258843.png" />
+    <Content Include="images\22635327_6634688.jpg" />
+    <Content Include="images\24372253_6876640.jpg" />
+    <Content Include="images\25240.png" />
+    <Content Include="images\254638.png" />
+    <Content Include="images\26411530_7222370.jpg" />
+    <Content Include="images\2692148-b988330e.png" />
+    <Content Include="images\2692148.png" />
+    <Content Include="images\2740596-04d67b3f.png" />
+    <Content Include="images\2740596.png" />
+    <Content Include="images\2749199-09f08aa9.png" />
+    <Content Include="images\2749199.png" />
+    <Content Include="images\275226-a1aec14c.png" />
+    <Content Include="images\275226.png" />
+    <Content Include="images\2806776-ee55029a.png" />
+    <Content Include="images\2806776.png" />
+    <Content Include="images\2891526-334ad4a3.png" />
+    <Content Include="images\2891526.png" />
+    <Content Include="images\2948239-4d30f6c1.png" />
+    <Content Include="images\2948239.png" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\3134484-3fe857a2.png" />
+    <Content Include="images\3134484.png" />
+    <Content Include="images\324.jpg" />
+    <Content Include="images\33308-67bffd37.png" />
+    <Content Include="images\33308.png" />
+    <Content Include="images\3341407-922e4e29.png" />
+    <Content Include="images\3341407.png" />
+    <Content Include="images\33756690_8104960.jpg" />
+    <Content Include="images\3394625-7f2a7244.png" />
+    <Content Include="images\3394625.png" />
+    <Content Include="images\3405055-43860087.png" />
+    <Content Include="images\3405055.png" />
+    <Content Include="images\3497817-e86a792e.png" />
+    <Content Include="images\3497817.png" />
+    <Content Include="images\35.png" />
+    <Content Include="images\35020245_8262271.jpg" />
+    <Content Include="images\35294599_8292849.jpg" />
+    <Content Include="images\4052102-d49c97c2.png" />
+    <Content Include="images\4052102.png" />
+    <Content Include="images\447031.png" />
+    <Content Include="images\4516627-4b72f41e.png" />
+    <Content Include="images\4516627.png" />
+    <Content Include="images\456212-00971c76.png" />
+    <Content Include="images\456212.png" />
+    <Content Include="images\45797-da42277b.png" />
+    <Content Include="images\45797.png" />
+    <Content Include="images\471710.png" />
+    <Content Include="images\4749268-b7e7c045.png" />
+    <Content Include="images\4749268.png" />
+    <Content Include="images\483642-b1d0d1dc.png" />
+    <Content Include="images\483642.png" />
+    <Content Include="images\483921-37cd6fcf.png" />
+    <Content Include="images\483921.png" />
+    <Content Include="images\484167-2e8c1cdb.png" />
+    <Content Include="images\484167.png" />
+    <Content Include="images\5358672-2f664272.png" />
+    <Content Include="images\5358672.png" />
+    <Content Include="images\543.jpg" />
+    <Content Include="images\5453.jpg" />
+    <Content Include="images\550701-8501500a.png" />
+    <Content Include="images\550701.png" />
+    <Content Include="images\59514-023ccb20.png" />
+    <Content Include="images\59514.png" />
+    <Content Include="images\597177.png" />
+    <Content Include="images\598166-13b0a098.png" />
+    <Content Include="images\598166.png" />
+    <Content Include="images\656.jpg" />
+    <Content Include="images\656975-68db30cd.png" />
+    <Content Include="images\656975.png" />
+    <Content Include="images\6816726-352cc42e.png" />
+    <Content Include="images\6816726.png" />
+    <Content Include="images\68f64b9d.jpeg" />
+    <Content Include="images\69062-4b3b7b6d.png" />
+    <Content Include="images\69062.png" />
+    <Content Include="images\7075232-9b118523.png" />
+    <Content Include="images\7075232.png" />
+    <Content Include="images\7078018-38120ebe.png" />
+    <Content Include="images\7078018.png" />
+    <Content Include="images\713433-02beab6e.png" />
+    <Content Include="images\713433.png" />
+    <Content Include="images\716598-6b156d50.png" />
+    <Content Include="images\716598.png" />
+    <Content Include="images\726199-33de0c02.png" />
+    <Content Include="images\726199-522d9f6b.png" />
+    <Content Include="images\726199.png" />
+    <Content Include="images\7574685-7fabc180.png" />
+    <Content Include="images\7574685.png" />
+    <Content Include="images\763331-fd9881af.png" />
+    <Content Include="images\763331.png" />
+    <Content Include="images\768869-9c006fa3.png" />
+    <Content Include="images\768869.png" />
+    <Content Include="images\7955813-3fa2b1e8.png" />
+    <Content Include="images\7955813.png" />
+    <Content Include="images\798388-8f53d346.png" />
+    <Content Include="images\798388.png" />
+    <Content Include="images\806843-5a74b949.png" />
+    <Content Include="images\806843.png" />
+    <Content Include="images\8283208-ab5e79fe.png" />
+    <Content Include="images\8283208.png" />
+    <Content Include="images\8423005-3ade538e.png" />
+    <Content Include="images\8423005.png" />
+    <Content Include="images\8474686-35808771.png" />
+    <Content Include="images\8474686.png" />
+    <Content Include="images\8631621-eaf3232c.png" />
+    <Content Include="images\8631621.png" />
+    <Content Include="images\880594-8ae141d8.png" />
+    <Content Include="images\880594.png" />
+    <Content Include="images\8860853-af9462e5.png" />
+    <Content Include="images\8860853.png" />
+    <Content Include="images\903082-c607df49.png" />
+    <Content Include="images\903082.png" />
+    <Content Include="images\9155715-ef03290b.png" />
+    <Content Include="images\9155715.png" />
+    <Content Include="images\9258347-32e02b6b.png" />
+    <Content Include="images\9258347.png" />
+    <Content Include="images\9273368-16dfc94d.png" />
+    <Content Include="images\9273368.png" />
+    <Content Include="images\9319635_Library_Freepik.jpg" />
+    <Content Include="images\9333891-0789e6eb.png" />
+    <Content Include="images\9333891.png" />
+    <Content Include="images\9380607-e290d8b0.png" />
+    <Content Include="images\9380607.png" />
+    <Content Include="images\9424607-1adea391.png" />
+    <Content Include="images\9424607.png" />
+    <Content Include="images\9523712-e82e89a7.png" />
+    <Content Include="images\9523712.png" />
+    <Content Include="images\9523827-12720736.png" />
+    <Content Include="images\9523827.png" />
+    <Content Include="images\AboutPgBanner.png" />
+    <Content Include="images\BannerAbout.png" />
+    <Content Include="images\BookShelf.png" />
+    <Content Include="images\cardImg2.png" />
+    <Content Include="images\CardImg3.png" />
+    <Content Include="images\frontPg.png" />
+    <Content Include="images\HomePgBannerImg.png" />
+    <Content Include="images\3002398-b9916540.png" />
+    <Content Include="images\3010762-12a57a39.png" />
+    <Content Include="images\3632451-3a5900e9.png" />
+    <Content Include="images\4144964-6bddacb7.png" />
+    <Content Include="images\447031-5d8d2ead.png" />
+    <Content Include="images\4526832-bf67c720.png" />
+    <Content Include="images\471710-fd60159e.png" />
+    <Content Include="images\5155720_2672335.jpg" />
+    <Content Include="images\5455782-96b52e2e.png" />
+    <Content Include="images\597177-4a298af6.png" />
+    <Content Include="images\6974855_4380.jpg" />
+    <Content Include="images\7915189_3784896.jpg" />
+    <Content Include="images\8690525_3952600.jpg" />
+    <Content Include="images\8ad73f3c.jpeg" />
+    <Content Include="images\9533713-471b948b.png" />
+    <Content Include="images\9533713.png" />
+    <Content Include="images\enlightlogotransparent.png" />
+    <Content Include="images\hgghgh.jpg" />
+    <Content Include="images\HomepgImg1.png" />
+    <Content Include="images\HomepgImg2.png" />
+    <Content Include="images\HomepgImg3.png" />
+    <Content Include="images\image.png" />
+    <Content Include="images\image1.png" />
+    <Content Include="images\image10.png" />
+    <Content Include="images\image14.png" />
+    <Content Include="images\image15.png" />
+    <Content Include="images\image16.png" />
+    <Content Include="images\image17.png" />
+    <Content Include="images\image18.png" />
+    <Content Include="images\image19.png" />
+    <Content Include="images\img1.jpg" />
+    <Content Include="images\img2.jpg" />
+    <Content Include="images\jhj.jpg" />
+    <Content Include="images\Linux.png" />
+    <Content Include="images\MACOS.png" />
+    <Content Include="images\schoolBackImg.png" />
+    <Content Include="images\solar_panel_3.jpg" />
+    <Content Include="images\solar_panel_32.jpg" />
+    <Content Include="images\HomePage.png" />
+    <Content Include="images\HomePgBanner.png" />
+    <Content Include="images\banner1.png" />
+    <Content Include="images\banner.png" />
+    <Content Include="images\img1_service.png" />
+    <Content Include="images\img2_service.png" />
+    <Content Include="images\img3_service.png" />
+    <Content Include="images\Globe.png" />
+    <Content Include="images\VisionImg.png" />
+    <Content Include="images\webIconForEnlight.ico" />
+    <Content Include="images\Windows.png" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\nicepage.js" />
+    <Content Include="Services.aspx" />
+    <Content Include="TrialPage.aspx" />
+    <Content Include="EnlightDesktopAdmin_UsersSubModule.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktop.aspx.cs">
+      <DependentUpon>EnlightDesktop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktop.aspx.designer.cs">
+      <DependentUpon>EnlightDesktop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_AcademicsSubModule.aspx.cs">
+      <DependentUpon>EnlightDesktopAdmin_AcademicsSubModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_AcademicsSubModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopAdmin_AcademicsSubModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_AccessibleModule.aspx.cs">
+      <DependentUpon>EnlightDesktopAdmin_AccessibleModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_AccessibleModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopAdmin_AccessibleModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_AdmissionSubModule.aspx.cs">
+      <DependentUpon>EnlightDesktopAdmin_AdmissionSubModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_AdmissionSubModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopAdmin_AdmissionSubModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_BasicSetupSubModule.aspx.cs">
+      <DependentUpon>EnlightDesktopAdmin_BasicSetupSubModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_BasicSetupSubModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopAdmin_BasicSetupSubModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_FeesCollectionSubModule.aspx.cs">
+      <DependentUpon>EnlightDesktopAdmin_FeesCollectionSubModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_FeesCollectionSubModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopAdmin_FeesCollectionSubModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_FeesSetupSubModule.aspx.cs">
+      <DependentUpon>EnlightDesktopAdmin_FeesSetupSubModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_FeesSetupSubModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopAdmin_FeesSetupSubModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_LibrarySubModule.aspx.cs">
+      <DependentUpon>EnlightDesktopAdmin_LibrarySubModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_LibrarySubModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopAdmin_LibrarySubModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_StaffSubModule.aspx.cs">
+      <DependentUpon>EnlightDesktopAdmin_StaffSubModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_StaffSubModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopAdmin_StaffSubModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopCashier_AccessibleModule.aspx.cs">
+      <DependentUpon>EnlightDesktopCashier_AccessibleModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopCashier_AccessibleModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopCashier_AccessibleModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopClerk_AccessibleModule.aspx.cs">
+      <DependentUpon>EnlightDesktopClerk_AccessibleModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopClerk_AccessibleModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopClerk_AccessibleModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopLibrarian_AccessibleModule.aspx.cs">
+      <DependentUpon>EnlightDesktopLibrarian_AccessibleModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopLibrarian_AccessibleModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopLibrarian_AccessibleModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopTeacher_AccessibleModule.aspx.cs">
+      <DependentUpon>EnlightDesktopTeacher_AccessibleModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopTeacher_AccessibleModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopTeacher_AccessibleModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightMarinePage.aspx.cs">
+      <DependentUpon>EnlightMarinePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightMarinePage.aspx.designer.cs">
+      <DependentUpon>EnlightMarinePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightMobileApp.aspx.cs">
+      <DependentUpon>EnlightMobileApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightMobileApp.aspx.designer.cs">
+      <DependentUpon>EnlightMobileApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightMobileAppAccessibleModules.aspx.cs">
+      <DependentUpon>EnlightMobileAppAccessibleModules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightMobileAppAccessibleModules.aspx.designer.cs">
+      <DependentUpon>EnlightMobileAppAccessibleModules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightOnline.aspx.cs">
+      <DependentUpon>EnlightOnline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightOnline.aspx.designer.cs">
+      <DependentUpon>EnlightOnline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TrialPage.aspx.cs">
+      <DependentUpon>TrialPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrialPage.aspx.designer.cs">
+      <DependentUpon>TrialPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_UsersSubModule.aspx.cs">
+      <DependentUpon>EnlightDesktopAdmin_UsersSubModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnlightDesktopAdmin_UsersSubModule.aspx.designer.cs">
+      <DependentUpon>EnlightDesktopAdmin_UsersSubModule.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <Content Include="Software\EnlightDesktopApplication.zip" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65426</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44316/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
